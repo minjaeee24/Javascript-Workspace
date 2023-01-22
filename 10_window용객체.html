@@ -87,7 +87,7 @@
             newWindow.alert("3초 후에 이 페이지는 닫힙니다."); // 블럭킹 요소(alert, confirm, prompt)
 
             // 확인을 누른 후, 3초 뒤 새 창이 닫힘.
-            setTimeout(function() { // setTimeout : 내가 제시한 일정시간(ms)후에 해당 함수를 "단 한번"만 실행
+            setTimeout(function() { // setTimeout : 내가 제시한 일정시간(ms)후에 해당 함수를 "단 한 번"만 실행
                 newWindow.close();
             }, 3000);
         }
@@ -191,7 +191,7 @@
         - 코멘트 노드(Comment Node) : 주석을 의미 <br>
         - 속성 노드(Attribute Node) : 태그 안의 속성을 의미(id, class, name, ..) <br><br>
 
-        텍스트노드가 존재하는 요소(시작태그와 종료태그가 한 쌍으로 이루어져있는 요소) : div, p, h1, ... <br>
+        텍스트 노드가 존재하는 요소(시작태그와 종료태그가 한 쌍으로 이루어져있는 요소) : div, p, h1, ... <br>
         텍스트 노드가 존재하지 않는 요소(시작태그로만 이루어져있는 요소) : img, input, ..
     </p>
 
@@ -214,7 +214,7 @@
             // 2) textNode객체 생성 : document.createTextNode("문구");
             let textNode = document.createTextNode("안녕하세요"); // 안녕하세요
             // 3) 두 개의 노드를 연결(요소노드 하위로 텍스트노드 추가)
-            //    요소노드.appendChile(텍스트노드)
+            //    요소노드.appendChild(텍스트노드)
             elementNode.appendChild(textNode); // <h3>안녕하세요</h3>;
 
             // document.getElementById("area2").innerHTML = elementNode;

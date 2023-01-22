@@ -20,7 +20,7 @@
         window : 자바스크립트 내장 객체로 브라우저 창이 열릴 때마다 하나씩만 만들어지는 객체
                  브라우저 창 안에 존재하는 모든 요소들의 최상위 객체
                  (즉, 모든곳에 적용되기 때문에 생략 가능)
-                 window.alert => alert / console.log => window.console.log
+                 window.alert => alert / window.console.log => console.log
 
         document : 웹 문서마다 하나씩 만들어지는 객체
                    HTML문서에 대한 정보들을 가지고 있음.
@@ -55,7 +55,7 @@
         }
     </script>
 
-    <h3>4) 선택한 요소.innerHTML/innerText = "해앋 요소에 출력할 문구";</h3>
+    <h3>4) 선택한 요소.innerHTML/innerText = "해당 요소에 출력할 문구";</h3>
     <div class="area" id="area1">
         자바스크립트에서 어떤 요소(element)안의 값(content값)을 가지고 온다거나 <br>
         변경하고자 할때 <b>innerHTML, innerText</b>라는 속성에 접근 가능

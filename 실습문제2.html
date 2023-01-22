@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제2</title>
+    <style>
+        div{
+            background: gainsboro;
+        }
+        legend{
+            text-align: center;
+        }
+        #title:checked, #a{
+            
+        }
+        #date:checked, #b{
+            
+        }
+        #author:checked, #c{
+            
+        }
+        #a, #b, #c{
+            display: none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Practice5</h1>
+    <fieldset>
+        <legend>검색할 항목을 선택하세요.</legend>
+        <input type="radio" name="tag" id="title" class="aa">
+        <label for="">제목</label>
+        <input type="radio" name="tag" id="date">
+        <label for="">날짜</label>
+        <input type="radio" name="tag" id="author">
+        <label for="">작성자</label>
+    </fieldset>
+
+    <div id="a" class="aa">
+        <p>검색할 제목을 입력하세요 : </p>
+        <input type="text"> <input type="submit" value="검색">
+    </div>
+
+    <div id="b">
+        <p>검색할 날짜를 선택하세요 : </p>
+        <input type="date"> - <input type="date"> <input type="submit" value="검색">
+    </div>
+
+    <div id="c">
+        <p>검색할 작성자 아이디를 입력하세요 : </p>
+        <input type="text"> <input type="submit" value="검색">
+    </div>
+</body>
+</html>
