@@ -24,8 +24,8 @@
             <option value="서울">서울</option>
         </select>
         <br><br>
-        <button onclick="return signin();">회원가입</button>
-        <input type="submit" value="취소">
+        <input type="submit" value="회원가입" onclick="return signin();">
+        <input type="reset" value="취소">
     </form>
 
     <script>
@@ -34,13 +34,15 @@
             let regExpId = /^[a-zA-Z][a-zA-Z0-9]{3,11}$/;
             if(!regExpId.test(userId)){
                 alert('아이디를 잘못 입력하셨습니다.');
+                userId.select(); //?
                 return false;
             }
     
             let userPwd = document.getElementById('userPwd').value;
-            let regExpPwd = /^[a-zA-Z0-9!@#$%^]{8,15}$/;
+            let regExpPwd = /^[a-z0-9!@#$%^]{8,15}$/i;
             if(!regExpPwd.test(userPwd)){
                 alret('비밀번호를 잘못 입력하셨습니다.');
+                userPwd = '';
                 return false;
             }
     
@@ -48,6 +50,7 @@
             let regExpPwd2 = /^[a-zA-Z0-9!@#$%^]{8,15}$/;
             if(userPwd != checkPwd) {
                 alert('비밀번호가 일치하지 않습니다.');
+                checkPwd = '';
                 return false;
             }
     
